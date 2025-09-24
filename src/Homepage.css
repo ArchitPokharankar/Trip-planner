@@ -1,0 +1,278 @@
+/* ====== General Layout ====== */
+.homepage {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+/* ====== Sidebar ====== */
+.sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .logo {
+  width: 150px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.sidebar .profile {
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.sidebar .profile img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .profile h2 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sidebar .profile p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* Buttons */
+.sidebar button.new-trip {
+  margin-top: 16px;
+  width: 100%;
+  background: linear-gradient(135deg, #ff6b35, #ff9f43);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar button.new-trip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 107, 53, 0.3);
+}
+
+/* Sidebar Links */
+.sidebar .section {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.sidebar .section h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.sidebar .section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sidebar .section li:hover {
+  background: #f3f4f6;
+}
+
+.sidebar button.logout {
+  margin-top: auto;
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ====== Main Content ====== */
+.main-content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.main-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.main-header p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-right .date {
+  font-size: 14px;
+  color: #374151;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.header-right button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ====== Quick Actions ====== */
+.quick-actions h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.quick-actions .grid {
+  display: grid;
+  gap: 16px;
+}
+
+.quick-actions .grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.quick-actions .grid.four {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 16px;
+}
+
+/* Action Buttons */
+.action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-btn.primary {
+  background: #ff6b35;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  height: 120px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(255, 107, 53, 0.2);
+}
+
+.action-btn.primary:hover {
+  background: #ff5722;
+}
+
+.action-btn.secondary {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  font-weight: 700;
+  height: 80px;
+  color: #111827;
+}
+
+.action-btn.secondary:hover {
+  background: #e5e7eb;
+}
+
+/* ====== Cards & Sections ====== */
+.section-heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.card h3 {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 220px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* ====== Footer ====== */
+footer {
+  margin-top: 32px;
+  color: #6b7280;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 13px;
+}
+footer button:hover {
+  text-decoration: underline;
+}

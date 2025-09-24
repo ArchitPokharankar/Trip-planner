@@ -1,0 +1,129 @@
+/* src/Auth.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../public/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: sans-serif;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark overlay to improve readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4); /* Black transparent overlay */
+  z-index: -1;
+}
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent card */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  background: #8e2de2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #4a00e0;
+}
+
+.link {
+  color: #8e2de2;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+/* Auth.css */
+.auth-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.auth-card {
+  background: #fff;
+  padding: 2rem;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 1rem;
+  background: orange;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.switch-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
